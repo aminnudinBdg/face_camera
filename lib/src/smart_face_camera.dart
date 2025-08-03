@@ -194,6 +194,7 @@ class _SmartFaceCameraState extends State<SmartFaceCamera>
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       if (widget.showFlashControl) ...[
@@ -230,15 +231,15 @@ class _SmartFaceCameraState extends State<SmartFaceCamera>
               return widget.messageBuilder!.call(context, value.detectedFace);
             }
             if (widget.message != null) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 55,
-                  vertical: 15,
-                ),
-                child: Text(
-                  widget.message!,
-                  textAlign: TextAlign.center,
-                  style: widget.messageStyle,
+              return Align(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    widget.message!,
+                    textAlign: TextAlign.center,
+                    style: widget.messageStyle,
+                  ),
                 ),
               );
             }
