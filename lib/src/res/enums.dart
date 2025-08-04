@@ -44,7 +44,10 @@ enum CameraFlashMode {
   auto,
 
   /// Always use the flash when taking a picture.
-  always
+  always,
+
+  /// Turns on the flash light and keeps it on until switched off.
+  torch,
 }
 
 enum CameraOrientation {
@@ -79,5 +82,5 @@ enum IndicatorShape {
   image,
 
   /// Hide face indicator
-  none
+  none,
 }
