@@ -5,7 +5,8 @@ import '../res/enums.dart';
 
 class EnumHandler {
   static ResolutionPreset imageResolutionToResolutionPreset(
-      ImageResolution res) {
+    ImageResolution res,
+  ) {
     switch (res) {
       case ImageResolution.low:
         // TODO: Handle this case.
@@ -29,7 +30,8 @@ class EnumHandler {
   }
 
   static CameraLensDirection? cameraLensToCameraLensDirection(
-      CameraLens? lens) {
+    CameraLens? lens,
+  ) {
     switch (lens) {
       case CameraLens.front:
         // TODO: Handle this case.
@@ -46,7 +48,8 @@ class EnumHandler {
   }
 
   static CameraLens? cameraLensDirectionToCameraLens(
-      CameraLensDirection? lens) {
+    CameraLensDirection? lens,
+  ) {
     switch (lens) {
       case CameraLensDirection.front:
         // TODO: Handle this case.
@@ -73,11 +76,15 @@ class EnumHandler {
       case CameraFlashMode.always:
         // TODO: Handle this case.
         return FlashMode.always;
+      case CameraFlashMode.torch:
+        // TODO: Handle this case.
+        return FlashMode.torch;
     }
   }
 
   static DeviceOrientation? cameraOrientationToDeviceOrientation(
-      CameraOrientation? orientation) {
+    CameraOrientation? orientation,
+  ) {
     switch (orientation) {
       case CameraOrientation.portraitUp:
         // TODO: Handle this case.

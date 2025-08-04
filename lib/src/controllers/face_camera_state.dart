@@ -18,20 +18,21 @@ class FaceCameraState {
 
   /// Create a new [FaceCameraState] instance that is uninitialized.
   FaceCameraState.uninitialized()
-      : this(
-          availableCameraLens: [],
-          currentCameraLens: 0,
-          currentFlashMode: 0,
-          isInitialized: false,
-          alreadyCheckingImage: false,
-          cameraController: null,
-          detectedFace: null,
-          availableFlashMode: [
-            CameraFlashMode.off,
-            CameraFlashMode.auto,
-            CameraFlashMode.always
-          ],
-        );
+    : this(
+        availableCameraLens: [],
+        currentCameraLens: 0,
+        currentFlashMode: 0,
+        isInitialized: false,
+        alreadyCheckingImage: false,
+        cameraController: null,
+        detectedFace: null,
+        availableFlashMode: [
+          CameraFlashMode.off,
+          CameraFlashMode.auto,
+          CameraFlashMode.always,
+          CameraFlashMode.torch,
+        ],
+      );
 
   /// Camera dependency controller
   final CameraController? cameraController;
